@@ -19,11 +19,66 @@ header{
 }
 
 .burgerLine{
-    background-color: black;
+    background-color: rebeccapurple;
     width: 17px;
     height: 2px;
     margin: 3px;
 }
+
+.dropdownBurger {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropbtn {
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdownBurger-content {
+    display: none;
+    position: absolute;
+    left:20px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdownBurger-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  .dropdownBurger-content p{
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .dropdownBurger-content a:hover {
+    background-color: rgb(241, 241, 241);
+  }
+  
+  .dropdownBurger:hover .dropdownBurger-content {
+    display: block;
+  }
+
 
 .headerList{
     display: none;
@@ -44,20 +99,19 @@ header{
     font-weight: 600;
 }
 
+.active{
+    color: white;
+    background: rebeccapurple;
+}
+
 .links:hover{
     cursor: pointer;
     background: rgb(241, 241, 241);
 }
 
-.links:active{
-    cursor: pointer;
-    background: rgb(0, 0, 0);
-}
-
-.links:focus{
-    cursor: pointer;
+.active:hover{
     color: white;
-    background: rgb(0, 0, 0);
+    background: rebeccapurple;
 }
 
 .searchBarContainer{
@@ -94,7 +148,8 @@ header{
     overflow: hidden;
   }
   
-  .dropdown .dropbtn {
+  .dropbtn {
+    cursor: pointer;
     font-size: 16px;  
     border: none;
     outline: none;
@@ -179,17 +234,6 @@ header{
     overflow: hidden;
   }
   
-  .dropdownAddButton .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-  
   .dropdownAddButton-content {
     display: none;
     position: absolute;
@@ -238,6 +282,7 @@ header{
 }
 
 .gridItem{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
 }
