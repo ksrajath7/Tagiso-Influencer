@@ -1,8 +1,9 @@
 <html>
 <head>
     <title>Tagisto-Influencer</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/uploadBox.css">
 </head>
 <body>
     <header>
@@ -15,15 +16,15 @@
             <div class="dropdownBurger-content">
               <!-- <p>Create</p> -->
               <a href="index.html">Profile</a>
-              <a href="posts.html">Posts</a>
-              <a href="collections.html">Collections</a>
+              <a href="html/posts.html">Posts</a>
+              <a href="html/collections.html">Collections</a>
             </div>
         </div> 
         
         <div class="headerList">
             <div class="headerLinks"><button class="links active" onclick="window.location.assign('index.html')">Profile</button></div>
-            <div class="headerLinks"><button class="links" onclick="window.location.assign('posts.html')">Posts</button></div>
-            <div class="headerLinks"><button class="links" onclick="window.location.assign('collections.html')">Collections</button></div>
+            <div class="headerLinks"><button class="links" onclick="window.location.assign('html/posts.html')">Posts</button></div>
+            <div class="headerLinks"><button class="links" onclick="window.location.assign('html/collections.html')">Collections</button></div>
         </div>
         <div class="searchBarContainer">
             <img src="Assets/search.svg" class="searchIcon">
@@ -59,8 +60,8 @@
             </button>
             <div class="dropdownAddButton-content">
               <p>Create</p>
-              <a href="#popup1">Post</a>
-              <a href="#popup1">Collection</a>
+              <a href="#newPost">Post</a>
+              <a href="#newCollection">Collection</a>
             </div>
         </div> 
         <!-- <div class="dropdownAddButton">
@@ -113,13 +114,38 @@
         </div>
         
     </div>
-    <div id="popup1" class="overlay">
+    <div id="newPost" class="overlay">
         <div class="popup">
-            <h2>Here i am</h2>
-            <a class="close" href="#">&times;</a>
-            <div class="content">
-                Thank to pop me out of that button, but now i'm done so you can close this window.
+            <div class="popupHeader">
+                <h2 class="popupHeading">Create Post</h2>
+                <a class="close" href="#">&times;</a>
             </div>
+            <div class="dropzone-wrapper">
+                <div class="dropzone-desc">
+                  <i class="glyphicon glyphicon-download-alt"></i>
+                  <p>Choose an image file or drag it here.</p>
+                </div>
+                <input type="file" name="img_logo" class="dropzone">
+              </div>
+            <div class="textFieldContainer">
+                <input type="text" class="textField">
+            </div>
+            <div class="textFieldContainer">
+                <textarea class="textField" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+    <div id="newCollection" class="overlay">
+        <div class="popup">
+            <div class="popupHeader">
+                <h2 class="popupHeading">Create Collection</h2>
+                <a class="close" href="#">&times;</a>
+            </div>
+            
+            <div class="textFieldContainer">
+                <input type="text" class="textField">
+            </div>
+            <button class="createButton">Create</button>
         </div>
     </div>
 </body>
