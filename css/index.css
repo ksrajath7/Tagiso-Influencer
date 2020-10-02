@@ -1,346 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
     margin: 0;
+    font-family: Roboto;
+}
+
+.body{
+  /* #14181B  rgb(250, 253, 204)*/
+  background-color: #14181B; 
 }
 
 header{
-    display: flex;
-    flex: 1;
-    align-items: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+  padding: 20px;
+  background-color: rgba(99, 32, 224, 1);
 }
 
-.burger{
-    display: block;
-    cursor: pointer;
-    flex:1;
+.home{
+  display: flex;
 }
 
-.burgerLine{
-    background-color: rebeccapurple;
-    width: 17px;
-    height: 2px;
-    margin: 3px;
+.leftPlane{
+  display: none;
+  flex: 0.1;
+  color: white;
+  font-weight: 800;
 }
 
-.dropdownBurger {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .dropbtn {
-    cursor: pointer;
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 0;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-  
-  .dropdownBurger-content {
-    display: none;
-    position: absolute;
-    left:20px;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdownBurger-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-weight: 600;
-  }
-  
-  .dropdownBurger-content p{
-    color: black;
-    padding: 10px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 15px;
-  }
-
-  .dropdownBurger-content a:hover {
-    background-color: rgb(241, 241, 241);
-  }
-  
-  .dropdownBurger:hover .dropdownBurger-content {
-    display: block;
-  }
-
-
-.headerList{
-    display: none;
+.iconsContainer{
+  padding: 20px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 
-.headerLinks{
-    font-weight: 600;
+.activeIcon{
+  border-right: 4px solid rgba(99, 32, 224, 1);
 }
 
-.links{
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 100px;
-    background: none;
-    border: none;
-    font-weight: 600;
+.iconsContainer img{
+  cursor: pointer;
 }
 
-.active{
-    color: white;
-    background: rebeccapurple;
+.menuItem{
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.links:hover{
-    cursor: pointer;
-    background: rgb(241, 241, 241);
+.middlePlane{
+  flex: 1;
+  display: grid;
+  row-gap: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 30px;
 }
 
-.active:hover{
-    color: white;
-    background: rebeccapurple;
+.section{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 
-.searchBarContainer{
-    display: none;
-    flex: 1;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-radius: 100px;
-    background: rgb(241, 241, 241);
-    border: none;
-    font-weight: 400;
+.createPost{
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 32, 224, 0.800);
+  position: relative;
+  background: none;
+  padding: 20px;
+  color: white;
 }
 
-.searchIcon{
-    margin-right: 10px;
-    margin-left: 10px;
-    
+.postSection{
+  border-radius: 30px;
+  position: relative;
+  background: none;
+  min-height: 300px;
 }
 
-.searchBar{
-    margin-right: 10px;
-    flex: 1;
-    font-weight: 600;
-    border: none;
-    background: none;
+.postImage{
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-.dropdown {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .dropbtn {
-    cursor: pointer;
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    right:0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: rgb(241, 241, 241);
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+.infDetails{
+  position: absolute;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  margin: 10px;
+  border-radius: 100px;
+  color: white;
+  background-color: rgba(99, 32, 224, 0.800);
+  padding: 10px;
+  padding-right: 20px;
 
-.dropdownIcon{
 }
 
-.profile{
-    display: flex;
-    flex: 1;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+.infDp{
+  height: 40px;
+  width: 40px;
+  border-radius: 30px;
 }
 
-.dp{
-    height: 120px;
-    width: 120px;
-    border-radius: 100px;
-    border: none;
+.dpImage{
+  cursor: pointer;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+ 
 }
 
-.username{
-    font-weight: 500;
+.influencer{
+  padding-left: 10px;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
 }
 
-.followers{
-    font-weight: 600;
+.influencer .name{
+  cursor: pointer;
+  margin-bottom: -2px;
 }
 
-.toolbar{
-    display: flex;
-    padding-bottom: 20px;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+.influencer .time{
+  margin-top: -2px;
 }
 
-.addButton{
-    cursor: pointer;
+.postDetails{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
 }
 
-
-.dropdownAddButton {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .dropdownAddButton-content {
-    display: none;
-    position: absolute;
-    left:20px;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdownAddButton-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-weight: 600;
-  }
-  
-  .dropdownAddButton-content p{
-    color: black;
-    padding: 10px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 15px;
-  }
-
-  .dropdownAddButton-content a:hover {
-    background-color: rgb(241, 241, 241);
-  }
-  
-  .dropdownAddButton:hover .dropdownAddButton-content {
-    display: block;
-  }
-
-.imageContainer{
-    padding-left: 10px;
-    padding-right: 10px;
-    display: grid;
-    flex: 1;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 15px;
-    row-gap: 15px;
+.postBlog{
+  cursor: pointer;
+  position: relative;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.6s;
+  -webkit-transition: opacity 0.6s;
+  /* white-space: nowrap;
+  text-overflow: ellipsis; 
+  overflow: hidden; */
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  background-color: rgba(99, 32, 224, 0.800);
+  padding: 20px;
 }
 
-.gridItem{
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
+.postBlog:hover{
+  opacity: 1;
+  transition: opacity 0.6s;
 }
 
-.gridItemDetails{
-    padding: 10px;
+.productsSection{
+  display: none;
+  border-radius: 30px;
+  color: rgba(99, 32, 224, 0.918);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 5px 5px 15px #3d3d3d23;
 }
 
-.gridItemHeading{
-    margin-bottom: 5px;
+.productsGrid{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
-.gridItemDescription{
-    font-size: 12px;
+.proImgDiv{
+  height: 80px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #3d3d3d23;
 }
 
-.displayImage{
-    width: 100%;
-    border-radius: 20px;
+.viewMore{
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #3d3d3d23;
 }
 
-@media(min-width:500px){
-    .imageContainer{
-        grid-template-columns: repeat(2, 1fr);}
+.proImg{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.rightPlane{
+  display: none;
+  flex: 0.25;
+  padding: 20px;
+  color: white;
+  font-weight: 800;
+}
+
+@media(min-width:600px){
+  .productsSection{padding: 30px;}
 }
 
 @media(min-width:800px){
-    .headerList{
-        display: flex;
-    }
-    .burger{display: none;}
-    .searchIconOnly{display: none;}
-    .searchBarContainer{
-        display: flex;
-    }
-    .imageContainer{
-        grid-template-columns: repeat(3, 1fr);
-        padding-left: 10px;
-        padding-right: 10px;}
+  .section{grid-template-columns: 1fr auto;}
 }
 
-@media(min-width:1000px){
-    .imageContainer{
-        grid-template-columns: repeat(4, 1fr);
-        padding-left: 20px;
-        padding-right: 20px;}
+@media(min-width:850px){
+  .productsSection{display: block;}
 }
 
 @media(min-width:1200px){
-    .imageContainer{
-        grid-template-columns: repeat(5, 1fr);
-        padding-left: 20px;
-        padding-right: 20px;}
+  .leftPlane{display: block;}
+  .middlePlane{flex: 0.9;}
+  .section{grid-template-columns: 4fr 3fr;}
 }
 
 @media(min-width:1400px){
-    .imageContainer{
-        grid-template-columns: repeat(6, 1fr);
-        padding-left: 50px;
-        padding-right: 50px;}
+  .middlePlane{flex: 0.65;}
+  .rightPlane{display: flex;}
 }
