@@ -5,32 +5,27 @@
     font-family: Roboto;
 }
 
-.body{
+.index{
   /* #14181B  rgb(250, 253, 204)*/
   background-color: #f5ebf6; 
-}
-
-header{
-  padding: 20px;
-  background-color: rgba(99, 32, 224, 1);
 }
 
 .home{
   display: flex;
 }
 
-.middlePlane{
+.middleIndex{
   flex:1;
 }
 
-.leftPlane{
+.leftIndex{
   background-color: blue;
-  height: 100vh;
+  /* height: 100vh; */
   display: none;
   flex: 0.05;
   color: white;
   font-weight: 800;
-  padding: 50px;
+  /* padding: 50px; */
 }
 
 .cover{
@@ -63,11 +58,13 @@ header{
   border-radius: 10px;
   background: none;
   border:2px solid white;
+  background-color: rgb(000, 000, 000, 0.1);
 }
 
 .search{
   flex: 1;
   background: none;
+  color: white;
   border: none;
 }
 .profile{
@@ -86,7 +83,7 @@ header{
   width: 120px;
   border-radius: 100px;
   border: 4px solid white;
-  box-shadow: 0px 10px 15px rgb(0,0,0,0.15);
+  box-shadow: 0px 10px 25px rgb(0,0,0,0.15);
 }
 
 .dpImage{
@@ -97,7 +94,7 @@ header{
 }
 
 .profileDetails{
-  top: 40px;
+  top: 60px;
   left: 0;
   right: 0;
   position: absolute;
@@ -107,14 +104,56 @@ header{
 }
 
 .influencer{
-  padding: 20px;
+  padding: 30px;
   padding-top: 100px;
   background-color: white;
   border-radius: 20px;
 }
 
 .influencerName{
-  
+  margin-bottom: 5px;
+}
+
+.influencerAbout{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 13px;
+  line-height: 1.3em;
+  font-weight: 500;
+  color: gray;
+}
+
+.follow{
+  display: grid;
+  margin-top: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 25px;
+  column-gap: 10px;
+}
+
+.follow h4{
+  color: blue;
+  font-size: 21px;
+}
+
+.follow button{
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  border-radius: 100px;
+}
+
+.followButton{
+  color: white;
+  background-color: blue;
+  border: none;
+}
+
+.messageButton{
+  background-color: white;
+  border: 1px solid gray;
 }
 
 .misc{
@@ -153,8 +192,7 @@ header{
   transition: opacity 0.6s;
 }
 
-
 @media(min-width:1200px){
-  .leftPlane{display: block;}
-  .middlePlane{flex: 0.95;}
+  .leftIndex{display: block;}
+  .middleIndex{flex: 0.95;}
 }

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    font-family: Roboto;
+}
+
+.posts{
+    display: flex;
+    min-height: 100vh;
+}
+
+.leftPosts{
+    display: none;
+    flex:0.15;
+    background-color: #181c65;
+}
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #050a5a;
+    border-radius: 10px;
+}
+
+.search{
+    background: none;
+    width: 100%;
+}
+
+.searchIcon{
+    margin-left: 10px;
+}
+
+.middlePosts{
+    flex: 1;
+    background-color: #030542;
+
+}
+
+.postSection{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+
+}
+
+.postImageDiv{
+    height: 200px;
+}
+
+.postImage{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.rightPosts{
+    display: none;
+    flex: 0.5;
+    /* background-color: #030542; */
+    background-color: #fff;
+}
+
+@media(min-width:1200px){
+  .leftPosts{display: block;}
+  .middlePosts{flex: 0.35;}
+  .rightPosts{display: block;}
+}
