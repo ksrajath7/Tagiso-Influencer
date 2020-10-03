@@ -19,141 +19,43 @@ header{
   display: flex;
 }
 
+.middlePlane{
+  flex:1;
+}
+
 .leftPlane{
+  background-color: blue;
+  height: 100vh;
   display: none;
-  flex: 0.2;
+  flex: 0.05;
   color: white;
   font-weight: 800;
-  padding: 20px;
+  padding: 50px;
 }
 
-.subHeading{
-  text-transform: uppercase;
-  color: black;
-}
-
-.storyGrid{
-  padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  row-gap: 30px;
-}
-
-.createStory{
+.cover{
   position: relative;
-  cursor: pointer;
-  display: flex;
-  font-weight: 600;
-  font-size: 30px;
-  color: rgba(128, 128, 128, 0.4);
-  justify-content: center;
-  align-items: center;
-  border: 3px dashed rgba(128, 128, 128, 0.4);
-  height: 230px;
-  border-radius: 70px;
+  background-color: red;
+  height: 350px;
 }
 
-
-.story{
-  color: white;
-  position: relative;
-  white-space: nowrap;
-  text-overflow: clip;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
-  height: 230px;
-  border-radius: 70px;
-}
-
-.storyHeading{
-  opacity: 0.5;
-  transition: opacity 0.6s;
-  -webkit-transition: opacity 0.6s;
-  padding: 20px;
-  background-color: #797dfa;
-  border-radius: 20px;
+.coverBottomBar{
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-}
-.storyHeading:hover{
-  opacity: 1;
-  transition: opacity 0.6s;
-}
-
-.storyImage{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border: none;
-  border-radius: 70px;
-}
-
-.middlePlane{
-  flex: 1;
-  row-gap: 30px;
-  padding: 20px;
-}
-
-.createPost{
-  position: relative;
-  border-radius: 50px;
-  position: relative;
-  background: #f9fbfc;
-  padding: 25px;
-  color: white;
-}
-
-.postIcons{
-  /* display: flex; */
-}
-
-.hr1{
-  border: 1px solid rgb(245, 245, 245);
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.create{
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr 3fr;
 }
 
-.dpImageDiv{
-  height: 50px;
-  width: 50px;
-  border-radius: 100px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
+.rightLinks{
+  background-color: red;
 }
 
-.dpImage{
-  height: 100%;
-  width: 100%;
+.coverImage{
   object-fit: cover;
-  border: none;
-  border-radius: 100px;
-}
-
-.whatsUp{
   width: 100%;
-  border: none;
-  padding: 20px;
-  resize: none;
-  font-weight: 700;
-}
-
-.postButton{
-  cursor: pointer;
-  color: white;
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: #797dfa;
-  border-radius: 50px;
-  bottom: 20;
-  right: 20;
-  padding: 15px 25px;
-  box-shadow: none;
-  border: none;
+  height: 100%;
 }
 
 .postBlog{
@@ -179,20 +81,8 @@ header{
   transition: opacity 0.6s;
 }
 
-.rightPlane{
-  display: none;
-  flex: 0.3;
-  padding: 20px;
-  color: white;
-  font-weight: 800;
-}
 
 @media(min-width:1200px){
   .leftPlane{display: block;}
-  .middlePlane{flex: 0.8;}
-}
-
-@media(min-width:1400px){
-  .middlePlane{flex: 0.5;}
-  .rightPlane{display: block;}
+  .middlePlane{flex: 0.95;}
 }
