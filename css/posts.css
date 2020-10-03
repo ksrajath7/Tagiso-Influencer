@@ -39,22 +39,103 @@
 
 }
 
-.postSection{
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 10px;
-
-}
-
 .postImageDiv{
     height: 200px;
 }
 
-.postImage{
+.postSection{
+    border-radius: 30px;
+    position: relative;
+    background: none;
+    min-height: 300px;
+  }
+  
+  .postImage{
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
+  }
+  
+  .infDetails{
+    position: absolute;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    margin: 10px;
+    border-radius: 100px;
+    color: white;
+    background-color: rgba(99, 32, 224, 0.800);
+    padding: 10px;
+    padding-right: 20px;
+  
+  }
+  
+  .infDp{
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+  }
+  
+  .dpImage{
+    cursor: pointer;
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+   
+  }
+  
+  .influencer{
+    padding-left: 10px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .influencer .name{
+    cursor: pointer;
+    margin-bottom: -2px;
+  }
+  
+  .influencer .time{
+    margin-top: -2px;
+  }
+  
+  .postDetails{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+  }
+  
+  .postBlog{
+    cursor: pointer;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 0.6s;
+    -webkit-transition: opacity 0.6s;
+    /* white-space: nowrap;
+    text-overflow: ellipsis; 
+    overflow: hidden; */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    background-color: rgba(99, 32, 224, 0.800);
+    padding: 20px;
+  }
+  
+  .postBlog:hover{
+    opacity: 1;
+    transition: opacity 0.6s;
+  }
 
 .rightPosts{
     display: none;
