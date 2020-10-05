@@ -147,12 +147,12 @@
 
 .rightPosts{
     display: none;
-    flex: 0.55;
+    flex: 0.6;
     background-color: #030542;
 }
 
 @media(min-width:1200px){
   .leftPosts{display: block;}
-  .middlePosts{flex: 0.3;}
+  .middlePosts{flex: 0.25;}
   .rightPosts{display: block;}
 }
